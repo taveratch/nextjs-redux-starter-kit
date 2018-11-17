@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{384:function(n,e,t){__NEXT_REGISTER_PAGE("/",function(){return n.exports=t(385),{page:n.exports.default}})},385:function(n,e,t){"use strict";t.r(e);var o=t(1),u=t.n(o);e.default=function(){return u.a.createElement("div",null,"Hello")}}},[[384,1,0]]]);

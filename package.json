@@ -6,9 +6,9 @@
   "scripts": {
     "babel-node": "babel-node",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:live": "NODE_PATH=. nodemon server.js",
-    "dev": "NODE_PATH=. node server.js",
-    "build": "NODE_PATH=. next build",
+    "dev:live": "NODE_PATH=./src nodemon server.js",
+    "dev": "NODE_PATH=./src node server.js",
+    "build": "NODE_PATH=./src next build ./src",
     "start": "NODE_ENV=production node server.js"
   },
   "author": "",
