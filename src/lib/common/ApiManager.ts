@@ -1,25 +1,18 @@
-import 'isomorphic-fetch'
-
-import { stringify } from 'query-string'
-
-const urlWithQuery = (url: string, query: any): string => !!query ? `${url}?${stringify(query)}` : url
-
+import APIRequest from 'model/api/APIRequest';
+import axios from 'axios'
 
 class ApiManager {
   static default: ApiManager = new ApiManager()
 
   private constructor() { }
 
-  fetcher(options: any): Promise<any> {
-    const url = urlWithQuery(options.url, options.query)
-    console.log(`>> Calling API: ${url}`)
-    return fetch(url, {
-      ...options,
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        ...options.headers
-      }
+  fetch(request: APIRequest): Promise<any> {
+    return new Promise((resolve, reject) => {
+      axios(request.makeRequest())
+      .then(response => resolve(response.data))
+      .catch(err => {
+        reject(err)
+      })
     })
   }
 }

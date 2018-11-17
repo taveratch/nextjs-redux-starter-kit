@@ -14,12 +14,12 @@ class CheckBox extends React.Component<Props> {
     id: "checkbox1",
     text: "",
     name: "checkbox1",
-    onClick: (name, checked) => { },
+    onClick: () => { },
     checked: false
   }
 
-  handleOnClick = e => {
-    const { name, checked } = e.target
+  handleOnClick = (e: React.SyntheticEvent<HTMLInputElement>) => {
+    const { name, checked } = e.currentTarget
     this.props.onClick(name, checked)
   }
 
