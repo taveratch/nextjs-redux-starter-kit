@@ -1,4 +1,0 @@
-export default {
-  INCREASE: 'INCREASE',
-  APP_TOGGLE_LOADING: 'APP_TOGGLE_LOADING'
-}
