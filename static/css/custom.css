@@ -1,0 +1,24 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bg-darkgrey {
+  background-color: #3E3E3E;
+}
+
+.width-1-rem {
+  width: 1rem;
+}
+
+.btn:focus, .btn:active, button {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.react-datepicker-wrapper {
+  width: 100%
+}
+
+.react-datepicker-wrapper div{
+  width: 100%
+}

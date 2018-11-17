@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "My Font";
+  src: url("./bold.ttf");
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: "My Font";
+  src: url("./semi-bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "My Font";
+  src: url("./text.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "My Font";
+  src: url("./thin.ttf");
+  font-weight: thin;
+}
+
+@font-face {
+  font-family: "My Font";
+  src: url("./medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "My Font";
+  src: url("./light.ttf");
+  font-weight: lighter;
+}
+
+*, button, input, label {
+  font-family: "My Font";
+  font-weight: 500;
+}
+
+html,body {
+  font-family: "My Font";
+  font-weight: 500;
+}
