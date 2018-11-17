@@ -1,5 +1,11 @@
-import app from './app'
+import app, {AppActionType} from './app'
 
-export default {
+type ActionTypes = {
+  app: AppActionType
+}
+
+const actions: ActionTypes = {
   app
 }
+
+export default actions

@@ -1,7 +1,14 @@
-import increament from './increament'
-import loading from './loading'
+import increament, { types as IncreamentTypes } from './increament'
+import loading, { types as LoadingTypes } from './loading'
 
-export default {
-  increament, 
+export type AppActionType = {
+  increament: IncreamentTypes,
+  loading: LoadingTypes
+}
+
+const actions: AppActionType = {
+  increament,
   loading
 }
+
+export default actions

@@ -1,5 +1,5 @@
 
-type types = {
+export type types = {
   INCREASE: string,
   APP_TOGGLE_LOADING: string
 }
