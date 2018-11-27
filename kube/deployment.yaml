@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: nextjs-web-ns # Match with namespace
+  name: nextjs-web # MARK C
+  labels:
+    app: nextjs-web # MARK C
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nextjs-web # MARK C
+  template:
+    metadata:
+      labels:
+        app: nextjs-web # MARK C
+    spec:
+      containers:
+      - name: nextjs-web
+        image: gcr.io/kubernetes-217215/github.com/taweesoft/...:latest
+        env:
+        - name: PORT
+          value: "5000"
+        ports:
+        - containerPort: 5000 # MARK C.1
+        imagePullPolicy: Always
+      restartPolicy: Always

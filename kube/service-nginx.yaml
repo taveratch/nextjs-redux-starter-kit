@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nextjs-web-service
+  namespace: nextjs-web-ns # Match with namespace
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80 # Port that allow nginx to communicate
+    targetPort: 5000 # Match with MARK C.1
+    protocol: TCP
+  selector:
+    app: nextjs-web # Match with MARK C
